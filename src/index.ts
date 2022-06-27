@@ -1,8 +1,7 @@
-const { Socket, Server } = require("socket.io");
-const mongoose = require("mongoose");
+import { initTrace } from "./trace";
+import { tracer } from "./instrument";
 
 module.exports = {
-    Socket,
-    Server,
-    mongoose,
+    initTrace,
+    tracer,
 };

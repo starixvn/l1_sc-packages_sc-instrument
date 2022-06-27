@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
+        "target": "es2017",
+        "module": "commonjs",
         "rootDir": "./src",
         "outDir": "./lib",
         "lib": ["es5", "es6"],
@@ -10,7 +12,7 @@
         "moduleResolution": "node",
         "allowJs": true
     },
-    "exclude": ["tests/", "lib/", "node_modules/",  "coverage/", "reports/"],
+    "exclude": ["tests/", "lib/", "node_modules/", "coverage/", "reports/"],
     "watchOptions": {
         "excludeDirectories": ["lib/*"]
     }
