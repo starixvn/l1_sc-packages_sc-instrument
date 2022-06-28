@@ -18,7 +18,6 @@
         "pubbeta": "npm publish --registry http://npm.lumigame.com --tag beta",
         "semantic-release": "semantic-release"
     },
-    "type": "module",
     "jestSonar": {
         "reportPath": "reports",
         "reportFile": "test-reporter.xml",
