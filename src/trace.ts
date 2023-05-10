@@ -10,30 +10,50 @@ import { AsyncLocalStorageContextManager } from "@opentelemetry/context-async-ho
 import { HttpInstrumentation } from "@opentelemetry/instrumentation-http";
 import { SocketIoInstrumentation } from "opentelemetry-instrumentation-socket.io";
 import { MongooseInstrumentation } from "opentelemetry-instrumentation-mongoose";
+import { IncomingMessage } from "http";
 
-export const initTrace = (serviceName: string, env: string, jaegerCollectorUri: string) => {
-    return new NodeSDK({
-        resource: new Resource({
-            [SemanticResourceAttributes.SERVICE_NAME]: `${serviceName} Service`,
-            [SemanticResourceAttributes.DEPLOYMENT_ENVIRONMENT]: env,
+const trace = new NodeSDK({
+    contextManager: new AsyncLocalStorageContextManager(),
+    textMapPropagator: new CompositePropagator({
+        propagators: [
+            new JaegerPropagator(),
+            new W3CTraceContextPropagator(),
+            new W3CBaggagePropagator(),
+            new B3Propagator({
+                injectEncoding: B3InjectEncoding.MULTI_HEADER,
+            }),
+        ],
+    }),
+    instrumentations: [
+        new HttpInstrumentation({
+            ignoreIncomingRequestHook: (req: IncomingMessage) => {
+                return req.method === "GET" || req.statusCode === 204;
+            },
         }),
-        spanProcessor: new BatchSpanProcessor(
+        new SocketIoInstrumentation() as any,
+        new MongooseInstrumentation(),
+    ],
+});
+
+export default trace;
+
+export const initSpanProcessor = (collectorUri: string) => {
+    trace.configureTracerProvider(
+        null,
+        new BatchSpanProcessor(
             new JaegerExporter({
                 tags: [],
-                endpoint: jaegerCollectorUri,
+                endpoint: collectorUri,
             })
-        ),
-        contextManager: new AsyncLocalStorageContextManager(),
-        textMapPropagator: new CompositePropagator({
-            propagators: [
-                new JaegerPropagator(),
-                new W3CTraceContextPropagator(),
-                new W3CBaggagePropagator(),
-                new B3Propagator({
-                    injectEncoding: B3InjectEncoding.MULTI_HEADER,
-                }),
-            ],
-        }),
-        instrumentations: [new HttpInstrumentation(), new SocketIoInstrumentation() as any, new MongooseInstrumentation()],
-    });
+        )
+    );
+};
+
+export const addIdentifiers = (serviceName: string, env: string) => {
+    trace.addResource(
+        new Resource({
+            [SemanticResourceAttributes.SERVICE_NAME]: `${serviceName} - ${env}`,
+            [SemanticResourceAttributes.DEPLOYMENT_ENVIRONMENT]: env,
+        })
+    );
 };
