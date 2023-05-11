@@ -1789,46 +1789,34 @@
   dependencies:
     "@opentelemetry/api" "^1.0.0"
 
-"@opentelemetry/api@^1.0.0", "@opentelemetry/api@^1.1.0", "@opentelemetry/api@>=1.0.0 <1.2.0", "@opentelemetry/api@>=1.0.0 <1.5.0":
+"@opentelemetry/api@^1.0.0", "@opentelemetry/api@^1.1.0", "@opentelemetry/api@>=1.0.0 <1.2.0":
   "integrity" "sha512-hf+3bwuBwtXsugA2ULBc95qxrOqP2pOekLz34BJhcAKawt94vfeNyUKpYc0lZQ/3sCP6LqRa7UAdHA7i5UODzQ=="
   "resolved" "http://npm.lumigame.com/@opentelemetry%2fapi/-/api-1.1.0.tgz"
   "version" "1.1.0"
-
-"@opentelemetry/context-async-hooks@^1.3.1":
-  "integrity" "sha512-PmwAanPNWCyS9JYFzhzVzHgviLhc0UHjOwdth+hp3HgQQ9XZZNE635P8JhAUHZmbghW9/qQFafRWOS4VN9VVnQ=="
-  "resolved" "https://npm.lumigame.com/@opentelemetry%2fcontext-async-hooks/-/context-async-hooks-1.12.0.tgz"
-  "version" "1.12.0"
 
 "@opentelemetry/context-async-hooks@1.3.1":
   "integrity" "sha512-NKUY3SGiEEIOD3EpB8erpEF4K1iyXkWald1vJMaa973+EPTASNSXvzf8hZa7nhnUVxYbxtTJqbSRsZFfbZpw4g=="
   "resolved" "https://npm.lumigame.com/@opentelemetry%2fcontext-async-hooks/-/context-async-hooks-1.3.1.tgz"
   "version" "1.3.1"
 
-"@opentelemetry/core@^1.0.0", "@opentelemetry/core@^1.3.1", "@opentelemetry/core@1.12.0":
-  "integrity" "sha512-4DWYNb3dLs2mSCGl65jY3aEgbvPWSHVQV/dmDWiYeWUrMakZQFcymqZOSUNZO0uDrEJoxMu8O5tZktX6UKFwag=="
-  "resolved" "https://npm.lumigame.com/@opentelemetry%2fcore/-/core-1.12.0.tgz"
-  "version" "1.12.0"
-  dependencies:
-    "@opentelemetry/semantic-conventions" "1.12.0"
-
-"@opentelemetry/core@1.3.1":
+"@opentelemetry/core@^1.0.0", "@opentelemetry/core@1.3.1":
   "integrity" "sha512-k7lOC86N7WIyUZsUuSKZfFIrUtINtlauMGQsC1r7jNmcr0vVJGqK1ROBvt7WWMxLbpMnt1q2pXJO8tKu0b9auA=="
   "resolved" "https://npm.lumigame.com/@opentelemetry%2fcore/-/core-1.3.1.tgz"
   "version" "1.3.1"
   dependencies:
     "@opentelemetry/semantic-conventions" "1.3.1"
 
-"@opentelemetry/exporter-jaeger@^1.3.1":
-  "integrity" "sha512-MGWslvok6tlNCHexHGnfXrSyobBqUDh4YOLENt2MeQ/F974SyVG4e73TD/CDM+227/rRM587hJ8dQBzvwUac/g=="
-  "resolved" "https://npm.lumigame.com/@opentelemetry%2fexporter-jaeger/-/exporter-jaeger-1.12.0.tgz"
-  "version" "1.12.0"
+"@opentelemetry/exporter-jaeger@1.3.1":
+  "integrity" "sha512-uJ9811zn5TTdazyTNc4xmcDnKC8H63VRGp23ujGTxBOCFUnFzfI/kUGUJ8/O7Xok9Ulop7wuuBW3onL1WedfjA=="
+  "resolved" "https://npm.lumigame.com/@opentelemetry%2fexporter-jaeger/-/exporter-jaeger-1.3.1.tgz"
+  "version" "1.3.1"
   dependencies:
-    "@opentelemetry/core" "1.12.0"
-    "@opentelemetry/sdk-trace-base" "1.12.0"
-    "@opentelemetry/semantic-conventions" "1.12.0"
+    "@opentelemetry/core" "1.3.1"
+    "@opentelemetry/sdk-trace-base" "1.3.1"
+    "@opentelemetry/semantic-conventions" "1.3.1"
     "jaeger-client" "^3.15.0"
 
-"@opentelemetry/instrumentation-http@^0.29.2":
+"@opentelemetry/instrumentation-http@0.29.2":
   "integrity" "sha512-XIF9WCH03rp3vQjwXXVdTxlsXT2AG6LYfFKO8r2QC+w4F4KFuZa4J3VPYJ0L/a/6dWt34DA67eBh3l6Z1rMZrg=="
   "resolved" "https://npm.lumigame.com/@opentelemetry%2finstrumentation-http/-/instrumentation-http-0.29.2.tgz"
   "version" "0.29.2"
@@ -1858,26 +1846,12 @@
     "semver" "^7.3.2"
     "shimmer" "^1.2.1"
 
-"@opentelemetry/propagator-b3@^1.3.1":
-  "integrity" "sha512-WFcn98075QPc2zE1obhKydJHUehI5/HuLoelPEVwATj+487hjCwjHj9r2fgmQkWpvuNSB7CJaA0ys6qqq1N6lg=="
-  "resolved" "https://npm.lumigame.com/@opentelemetry%2fpropagator-b3/-/propagator-b3-1.12.0.tgz"
-  "version" "1.12.0"
-  dependencies:
-    "@opentelemetry/core" "1.12.0"
-
 "@opentelemetry/propagator-b3@1.3.1":
   "integrity" "sha512-tEAtHsRr6l3glsmKaJiJ/7HDw/isPv+f8OBsWJqkSlfLicKes8T/1D7nEDC6jPACiEbD3f6oK1KQSpMijC9/UQ=="
   "resolved" "https://npm.lumigame.com/@opentelemetry%2fpropagator-b3/-/propagator-b3-1.3.1.tgz"
   "version" "1.3.1"
   dependencies:
     "@opentelemetry/core" "1.3.1"
-
-"@opentelemetry/propagator-jaeger@^1.3.1":
-  "integrity" "sha512-ugtWF7GC6X5RIJ0+iMwW2iVAGNs206CAeq8XQ8OkJRg+v0lp4H0/i+gJ4hubTT8NIL5a3IxtIrAENPLIGdLucQ=="
-  "resolved" "https://npm.lumigame.com/@opentelemetry%2fpropagator-jaeger/-/propagator-jaeger-1.12.0.tgz"
-  "version" "1.12.0"
-  dependencies:
-    "@opentelemetry/core" "1.12.0"
 
 "@opentelemetry/propagator-jaeger@1.3.1":
   "integrity" "sha512-H6swQcjZ8aMCS5caZaEBaadfn205IqLlB3ZyY+tCWDf5YPwJgPpjw3qgYgWulHVSEzK7VQTle/mZG7u9MAe6Pw=="
@@ -1906,15 +1880,7 @@
     "gcp-metadata" "^5.0.0"
     "semver" "7.3.5"
 
-"@opentelemetry/resources@^1.0.0", "@opentelemetry/resources@^1.3.1", "@opentelemetry/resources@1.12.0":
-  "integrity" "sha512-gunMKXG0hJrR0LXrqh7BVbziA/+iJBL3ZbXCXO64uY+SrExkwoyJkpiq9l5ismkGF/A20mDEV7tGwh+KyPw00Q=="
-  "resolved" "https://npm.lumigame.com/@opentelemetry%2fresources/-/resources-1.12.0.tgz"
-  "version" "1.12.0"
-  dependencies:
-    "@opentelemetry/core" "1.12.0"
-    "@opentelemetry/semantic-conventions" "1.12.0"
-
-"@opentelemetry/resources@1.3.1":
+"@opentelemetry/resources@^1.0.0", "@opentelemetry/resources@1.3.1":
   "integrity" "sha512-X8bl3X0YjlsHWy0Iv0KUETtZuRUznX4yr1iScKCtfy8AoRfZFc2xxWKMDJ0TrqYwSapgeg4YwpmRzUKmmnrbeA=="
   "resolved" "https://npm.lumigame.com/@opentelemetry%2fresources/-/resources-1.3.1.tgz"
   "version" "1.3.1"
@@ -1932,7 +1898,7 @@
     "@opentelemetry/resources" "1.3.1"
     "lodash.merge" "4.6.2"
 
-"@opentelemetry/sdk-node@^0.29.2":
+"@opentelemetry/sdk-node@0.29.2":
   "integrity" "sha512-R/RyNXgEWLsIrFwQD9f4taDHbKVEDZcJFcOTJmbWSjxjj1ZkRCYePjGfg6beuAdcd1m1YygN02+Ko8JrV/Ekjg=="
   "resolved" "https://npm.lumigame.com/@opentelemetry%2fsdk-node/-/sdk-node-0.29.2.tgz"
   "version" "0.29.2"
@@ -1946,15 +1912,6 @@
     "@opentelemetry/sdk-metrics-base" "0.29.2"
     "@opentelemetry/sdk-trace-base" "1.3.1"
     "@opentelemetry/sdk-trace-node" "1.3.1"
-
-"@opentelemetry/sdk-trace-base@^1.3.1", "@opentelemetry/sdk-trace-base@1.12.0":
-  "integrity" "sha512-pfCOB3tNDlYVoWuz4D7Ji+Jmy9MHnATWHVpkERdCEiwUGEZ+4IvNPXUcPc37wJVmMpjGLeaWgPPrie0KIpWf1A=="
-  "resolved" "https://npm.lumigame.com/@opentelemetry%2fsdk-trace-base/-/sdk-trace-base-1.12.0.tgz"
-  "version" "1.12.0"
-  dependencies:
-    "@opentelemetry/core" "1.12.0"
-    "@opentelemetry/resources" "1.12.0"
-    "@opentelemetry/semantic-conventions" "1.12.0"
 
 "@opentelemetry/sdk-trace-base@1.3.1":
   "integrity" "sha512-Or95QZ+9QyvAiwqj+K68z8bDDuyWF50c37w17D10GV1dWzg4Ezcectsu/GB61QcBxm3Y4br0EN5F5TpIFfFliQ=="
@@ -1977,15 +1934,10 @@
     "@opentelemetry/sdk-trace-base" "1.3.1"
     "semver" "^7.3.5"
 
-"@opentelemetry/semantic-conventions@^1.0.0", "@opentelemetry/semantic-conventions@^1.3.1", "@opentelemetry/semantic-conventions@1.3.1":
+"@opentelemetry/semantic-conventions@^1.0.0", "@opentelemetry/semantic-conventions@1.3.1":
   "integrity" "sha512-wU5J8rUoo32oSef/rFpOT1HIjLjAv3qIDHkw1QIhODV3OpAVHi5oVzlouozg9obUmZKtbZ0qUe/m7FP0y0yBzA=="
   "resolved" "http://npm.lumigame.com/@opentelemetry%2fsemantic-conventions/-/semantic-conventions-1.3.1.tgz"
   "version" "1.3.1"
-
-"@opentelemetry/semantic-conventions@1.12.0":
-  "integrity" "sha512-hO+bdeGOlJwqowUBoZF5LyP3ORUFOP1G0GRv8N45W/cztXbT2ZEXaAzfokRS9Xc9FWmYrDj32mF6SzH6wuoIyA=="
-  "resolved" "https://npm.lumigame.com/@opentelemetry%2fsemantic-conventions/-/semantic-conventions-1.12.0.tgz"
-  "version" "1.12.0"
 
 "@semantic-release/changelog@^5.0.1":
   "integrity" "sha512-unvqHo5jk4dvAf2nZ3aw4imrlwQ2I50eVVvq9D47Qc3R+keNqepx1vDYwkjF8guFXnOYaYcR28yrZWno1hFbiw=="
@@ -2130,6 +2082,11 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@socket.io/component-emitter@~3.1.0":
+  "integrity" "sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg=="
+  "resolved" "https://npm.lumigame.com/@socket.io%2fcomponent-emitter/-/component-emitter-3.1.0.tgz"
+  "version" "3.1.0"
+
 "@szmarczak/http-timer@^4.0.0":
   "integrity" "sha512-4BAffykYOgO+5nzBWYwE3W90sBgLJoUPRWWcL8wlyiM8IB8ipJz3UMJ9KXQd1RKQXpKp8Tutn80HZtWsu2u76w=="
   "resolved" "http://npm.lumigame.com/@szmarczak%2fhttp-timer/-/http-timer-4.0.6.tgz"
@@ -2184,6 +2141,18 @@
     "@types/keyv" "*"
     "@types/node" "*"
     "@types/responselike" "*"
+
+"@types/cookie@^0.4.1":
+  "integrity" "sha512-XW/Aa8APYr6jSVVA1y/DEIZX0/GMKLEVekNG727R8cs56ahETkRAy/3DR7+fJyh7oUgGwNQaRfXCun0+KbWY7Q=="
+  "resolved" "https://npm.lumigame.com/@types%2fcookie/-/cookie-0.4.1.tgz"
+  "version" "0.4.1"
+
+"@types/cors@^2.8.12":
+  "integrity" "sha512-RG8AStHlUiV5ysZQKq97copd2UmVYw3/pRMLefISZ3S1hK104Cwm7iLQ3fTKx+lsUH2CE8FlLaYeEA2LSeqYUA=="
+  "resolved" "https://npm.lumigame.com/@types%2fcors/-/cors-2.8.13.tgz"
+  "version" "2.8.13"
+  dependencies:
+    "@types/node" "*"
 
 "@types/graceful-fs@^4.1.2":
   "integrity" "sha512-anKkLmZZ+xm4p8JWBf4hElkM4XR+EZeA2M9BAkkTldmcyDY4mbdIJnRghDJH3Ov5ooY7/UAoENtmdMSkaAd7Cw=="
@@ -2249,7 +2218,7 @@
   "resolved" "http://npm.lumigame.com/@types%2fminimist/-/minimist-1.2.2.tgz"
   "version" "1.2.2"
 
-"@types/node@*":
+"@types/node@*", "@types/node@>=10.0.0":
   "integrity" "sha512-cHlGmko4gWLVI27cGJntjs/Sj8th9aYwplmZFwmmgYQQvL5NUsgVJG7OddLvNfLqYS31KFN0s3qlaD9qCaxACA=="
   "resolved" "http://npm.lumigame.com/@types%2fnode/-/node-18.0.0.tgz"
   "version" "18.0.0"
@@ -2326,6 +2295,14 @@
   "integrity" "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
   "resolved" "http://npm.lumigame.com/abbrev/-/abbrev-1.1.1.tgz"
   "version" "1.1.1"
+
+"accepts@~1.3.4":
+  "integrity" "sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw=="
+  "resolved" "https://npm.lumigame.com/accepts/-/accepts-1.3.8.tgz"
+  "version" "1.3.8"
+  dependencies:
+    "mime-types" "~2.1.34"
+    "negotiator" "0.6.3"
 
 "acorn-globals@^6.0.0":
   "integrity" "sha512-ZQl7LOWaF5ePqqcX4hLuv/bLXYQNfNWw2c0/yX/TsPRKamzHcTGQnlCjHT3TsmkOUVEPS3crCxiPfdzE/Trlhg=="
@@ -2719,6 +2696,11 @@
     "isobject" "^3.0.1"
     "mixin-deep" "^1.2.0"
     "pascalcase" "^0.1.1"
+
+"base64id@~2.0.0", "base64id@2.0.0":
+  "integrity" "sha512-lGe34o6EHj9y3Kts9R4ZYs/Gr+6N7MCaMlIFA3F1R2O5/m7K06AxfSeO5530PEERE6/WyEg3lsuyw4GHlPZHog=="
+  "resolved" "https://npm.lumigame.com/base64id/-/base64id-2.0.0.tgz"
+  "version" "2.0.0"
 
 "bcrypt-pbkdf@^1.0.0":
   "integrity" "sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4="
@@ -3312,6 +3294,11 @@
   dependencies:
     "safe-buffer" "~5.1.1"
 
+"cookie@~0.4.1":
+  "integrity" "sha512-aSWTXFzaKWkvHO1Ny/s+ePFpvKsPnjc551iI41v3ny/ow6tBG5Vd+FuqGNhh1LxOmVzOlGUriIlOaokOvhaStA=="
+  "resolved" "https://npm.lumigame.com/cookie/-/cookie-0.4.2.tgz"
+  "version" "0.4.2"
+
 "copy-descriptor@^0.1.0":
   "integrity" "sha1-Z29us8OZl8LuGsOpJP1hJHSPV40="
   "resolved" "http://npm.lumigame.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz"
@@ -3339,6 +3326,14 @@
   "integrity" "sha1-tf1UIgqivFq1eqtxQMlAdUUDwac="
   "resolved" "http://npm.lumigame.com/core-util-is/-/core-util-is-1.0.2.tgz"
   "version" "1.0.2"
+
+"cors@~2.8.5":
+  "integrity" "sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g=="
+  "resolved" "https://npm.lumigame.com/cors/-/cors-2.8.5.tgz"
+  "version" "2.8.5"
+  dependencies:
+    "object-assign" "^4"
+    "vary" "^1"
 
 "cosmiconfig@^6.0.0":
   "integrity" "sha512-xb3ZL6+L8b9JLLCx3ZdoZy4+2ECphCMo2PwqgP1tlfVq6M6YReyzBJtvWWtbDSpNr9hn96pkCiZqUcFEc+54Qg=="
@@ -3444,7 +3439,7 @@
   dependencies:
     "ms" "2.0.0"
 
-"debug@^4.0.0", "debug@^4.1.0", "debug@^4.1.1", "debug@4":
+"debug@^4.0.0", "debug@^4.1.0", "debug@^4.1.1", "debug@~4.3.1", "debug@~4.3.2", "debug@4":
   "integrity" "sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ=="
   "resolved" "http://npm.lumigame.com/debug/-/debug-4.3.4.tgz"
   "version" "4.3.4"
@@ -3716,6 +3711,27 @@
   "version" "1.4.4"
   dependencies:
     "once" "^1.4.0"
+
+"engine.io-parser@~5.0.3":
+  "integrity" "sha512-tjuoZDMAdEhVnSFleYPCtdL2GXwVTGtNjoeJd9IhIG3C1xs9uwxqRNEu5WpnDZCaozwVlK/nuQhpodhXSIMaxw=="
+  "resolved" "https://npm.lumigame.com/engine.io-parser/-/engine.io-parser-5.0.6.tgz"
+  "version" "5.0.6"
+
+"engine.io@~6.4.1":
+  "integrity" "sha512-FKn/3oMiJjrOEOeUub2WCox6JhxBXq/Zn3fZOMCBxKnNYtsdKjxhl7yR3fZhM9PV+rdE75SU5SYMc+2PGzo+Tg=="
+  "resolved" "https://npm.lumigame.com/engine.io/-/engine.io-6.4.2.tgz"
+  "version" "6.4.2"
+  dependencies:
+    "@types/cookie" "^0.4.1"
+    "@types/cors" "^2.8.12"
+    "@types/node" ">=10.0.0"
+    "accepts" "~1.3.4"
+    "base64id" "2.0.0"
+    "cookie" "~0.4.1"
+    "cors" "~2.8.5"
+    "debug" "~4.3.1"
+    "engine.io-parser" "~5.0.3"
+    "ws" "~8.11.0"
 
 "env-ci@^5.0.0":
   "integrity" "sha512-o0JdWIbOLP+WJKIUt36hz1ImQQFuN92nhsfTkHHap+J8CiI8WgGpH/a9jEGHh4/TU5BUUGjlnKXNoDb57+ne+A=="
@@ -6510,7 +6526,7 @@
   "resolved" "http://npm.lumigame.com/mime-db/-/mime-db-1.52.0.tgz"
   "version" "1.52.0"
 
-"mime-types@^2.1.12":
+"mime-types@^2.1.12", "mime-types@~2.1.34":
   "integrity" "sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw=="
   "resolved" "http://npm.lumigame.com/mime-types/-/mime-types-2.1.35.tgz"
   "version" "2.1.35"
@@ -6755,6 +6771,11 @@
 
 "negotiator@^0.6.2":
   "version" "0.6.2"
+
+"negotiator@0.6.3":
+  "integrity" "sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg=="
+  "resolved" "https://npm.lumigame.com/negotiator/-/negotiator-0.6.3.tgz"
+  "version" "0.6.3"
 
 "neo-async@^2.6.0":
   "integrity" "sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw=="
@@ -7074,6 +7095,11 @@
   "resolved" "http://npm.lumigame.com/object-assign/-/object-assign-4.1.1.tgz"
   "version" "4.1.1"
 
+"object-assign@^4":
+  "integrity" "sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM="
+  "resolved" "https://npm.lumigame.com/object-assign/-/object-assign-4.1.1.tgz"
+  "version" "4.1.1"
+
 "object-copy@^0.1.0":
   "integrity" "sha1-fn2Fi3gb18mRpBupde04EnVOmYw="
   "resolved" "http://npm.lumigame.com/object-copy/-/object-copy-0.1.0.tgz"
@@ -7141,7 +7167,7 @@
   "resolved" "http://npm.lumigame.com/opener/-/opener-1.5.2.tgz"
   "version" "1.5.2"
 
-"opentelemetry-instrumentation-mongoose@^0.28.0":
+"opentelemetry-instrumentation-mongoose@0.28.0":
   "integrity" "sha512-tFI6cs47whGyBDFLS+knDYuIah9IeERVJhwHklU74z19RE32EbFmgCL1rGQJx4rbrU4GvAB5CGj47cbrq3ikvQ=="
   "resolved" "https://npm.lumigame.com/opentelemetry-instrumentation-mongoose/-/opentelemetry-instrumentation-mongoose-0.28.0.tgz"
   "version" "0.28.0"
@@ -7150,7 +7176,7 @@
     "@opentelemetry/instrumentation" "^0.28.0"
     "@opentelemetry/semantic-conventions" "^1.0.0"
 
-"opentelemetry-instrumentation-socket.io@^0.28.0":
+"opentelemetry-instrumentation-socket.io@0.28.0":
   "integrity" "sha512-cc4eG58OV/8yPN0AtTuAS+Fs6lFBeRvoJKUeq7hiF2/iA9mRkJP2jzke0iLdIlXVk1JnL3RCz+JPqThLde3YpA=="
   "resolved" "https://npm.lumigame.com/opentelemetry-instrumentation-socket.io/-/opentelemetry-instrumentation-socket.io-0.28.0.tgz"
   "version" "0.28.0"
@@ -8308,6 +8334,33 @@
     "source-map-resolve" "^0.5.0"
     "use" "^3.1.0"
 
+"socket.io-adapter@~2.5.2":
+  "integrity" "sha512-87C3LO/NOMc+eMcpcxUBebGjkpMDkNBS9tf7KJqcDsmL936EChtVva71Dw2q4tQcuVC+hAUy4an2NO/sYXmwRA=="
+  "resolved" "https://npm.lumigame.com/socket.io-adapter/-/socket.io-adapter-2.5.2.tgz"
+  "version" "2.5.2"
+  dependencies:
+    "ws" "~8.11.0"
+
+"socket.io-parser@~4.2.1":
+  "integrity" "sha512-DJtziuKypFkMMHCm2uIshOYC7QaylbtzQwiMYDuCKy3OPkjLzu4B2vAhTlqipRHHzrI0NJeBAizTK7X+6m1jVw=="
+  "resolved" "https://npm.lumigame.com/socket.io-parser/-/socket.io-parser-4.2.2.tgz"
+  "version" "4.2.2"
+  dependencies:
+    "@socket.io/component-emitter" "~3.1.0"
+    "debug" "~4.3.1"
+
+"socket.io@^4.6.1":
+  "integrity" "sha512-KMcaAi4l/8+xEjkRICl6ak8ySoxsYG+gG6/XfRCPJPQ/haCRIJBTL4wIl8YCsmtaBovcAXGLOShyVWQ/FG8GZA=="
+  "resolved" "https://npm.lumigame.com/socket.io/-/socket.io-4.6.1.tgz"
+  "version" "4.6.1"
+  dependencies:
+    "accepts" "~1.3.4"
+    "base64id" "~2.0.0"
+    "debug" "~4.3.2"
+    "engine.io" "~6.4.1"
+    "socket.io-adapter" "~2.5.2"
+    "socket.io-parser" "~4.2.1"
+
 "socks-proxy-agent@^6.0.0":
   "version" "6.1.0"
   dependencies:
@@ -9077,6 +9130,11 @@
   dependencies:
     "builtins" "^1.0.3"
 
+"vary@^1":
+  "integrity" "sha1-IpnwLG3tMNSllhsLn3RSShj2NPw="
+  "resolved" "https://npm.lumigame.com/vary/-/vary-1.1.2.tgz"
+  "version" "1.1.2"
+
 "verror@1.10.0":
   "integrity" "sha1-OhBcoXBTr1XW4nDB+CiGguGNpAA="
   "resolved" "http://npm.lumigame.com/verror/-/verror-1.10.0.tgz"
@@ -9249,6 +9307,11 @@
   "integrity" "sha512-ri1Id1WinAX5Jqn9HejiGb8crfRio0Qgu8+MtL36rlTA6RLsMdWt1Az/19A2Qij6uSHUMphEFaTKa4WG+UNHNw=="
   "resolved" "http://npm.lumigame.com/ws/-/ws-7.5.8.tgz"
   "version" "7.5.8"
+
+"ws@~8.11.0":
+  "integrity" "sha512-HPG3wQd9sNQoT9xHyNCXoDUa+Xw/VevmY9FoHyQ+g+rrMn4j6FB4np7Z0OhdTgjx6MgQLK7jwSy1YecU1+4Asg=="
+  "resolved" "https://npm.lumigame.com/ws/-/ws-8.11.0.tgz"
+  "version" "8.11.0"
 
 "xml-name-validator@^3.0.0":
   "integrity" "sha512-A5CUptxDsvxKJEU3yO6DuWBSJz/qizqzJKOMIfUJHETbBw/sFaDxgd6fxm1ewUaM0jZ444Fc5vC5ROYurg/4Pw=="
