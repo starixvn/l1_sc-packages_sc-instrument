@@ -2,7 +2,7 @@
     "compilerOptions": {
         "rootDir": "./src",
         "outDir": "./lib",
-        "lib": ["es5", "es6", "DOM"],
+        "lib": ["es5", "es6", "DOM"], //DOM is workaround for OTEL package, dont remove until it is fixed
         "sourceMap": true,
         "declaration": true,
         "declarationMap": true,
