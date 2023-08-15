@@ -1,6 +1,5 @@
 import { NodeSDK } from "@opentelemetry/sdk-node";
 import { BatchSpanProcessor } from "@opentelemetry/sdk-trace-base";
-import { JaegerExporter } from "@opentelemetry/exporter-jaeger";
 import { JaegerPropagator } from "@opentelemetry/propagator-jaeger";
 import { Resource } from "@opentelemetry/resources";
 import { SemanticResourceAttributes } from "@opentelemetry/semantic-conventions";
@@ -9,8 +8,9 @@ import { B3InjectEncoding, B3Propagator } from "@opentelemetry/propagator-b3";
 import { AsyncLocalStorageContextManager } from "@opentelemetry/context-async-hooks";
 import { HttpInstrumentation } from "@opentelemetry/instrumentation-http";
 import { SocketIoInstrumentation } from "opentelemetry-instrumentation-socket.io";
-import { MongooseInstrumentation } from "opentelemetry-instrumentation-mongoose";
+import { MongooseInstrumentation } from "@opentelemetry/instrumentation-mongoose";
 import { IncomingMessage } from "http";
+import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-proto";
 
 const trace = new NodeSDK({
     contextManager: new AsyncLocalStorageContextManager(),
@@ -41,9 +41,9 @@ export const initSpanProcessor = (collectorUri: string) => {
     trace.configureTracerProvider(
         null,
         new BatchSpanProcessor(
-            new JaegerExporter({
-                tags: [],
-                endpoint: collectorUri,
+            new OTLPTraceExporter({
+                url: collectorUri,
+                headers: {},
             })
         )
     );
