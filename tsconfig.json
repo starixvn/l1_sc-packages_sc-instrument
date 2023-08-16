@@ -8,7 +8,8 @@
         "declarationMap": true,
         "resolveJsonModule": true,
         "moduleResolution": "node",
-        "allowJs": true
+        "allowJs": true,
+        "skipLibCheck": true
     },
     "exclude": ["tests/", "lib/", "node_modules/", "coverage/", "reports/"],
     "watchOptions": {
