@@ -35,8 +35,8 @@ export const initializer = new NodeSDK({
     ],
 });
 
-export const initSpanProcessor = (collectorUri: string) => {
-    initializer.configureTracerProvider(
+export const initSpanProcessor = (collectorUri: string, trace: NodeSDK) => {
+    trace.configureTracerProvider(
         null,
         new BatchSpanProcessor(
             new OTLPTraceExporter({
@@ -47,8 +47,8 @@ export const initSpanProcessor = (collectorUri: string) => {
     );
 };
 
-export const addIdentifiers = (serviceName: string, env: string) => {
-    initializer.addResource(
+export const addIdentifiers = (serviceName: string, env: string, trace: NodeSDK) => {
+    trace.addResource(
         new Resource({
             [SemanticResourceAttributes.SERVICE_NAME]: `${serviceName} - ${env}`,
             [SemanticResourceAttributes.DEPLOYMENT_ENVIRONMENT]: env,

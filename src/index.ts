@@ -1,4 +1,5 @@
-import * as TraceInitializer from "./trace";
 import { tracer } from "./instrument";
+import { initializer, initSpanProcessor, addIdentifiers } from "./trace";
+import { NodeSDK } from "@opentelemetry/sdk-node";
 
-export { TraceInitializer as Trace, tracer };
+export { tracer, initializer, initSpanProcessor, addIdentifiers, NodeSDK };
