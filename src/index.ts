@@ -1,4 +1,4 @@
-import * as Trace from "./trace";
+import { traceInitializer } from "./trace";
 import { tracer } from "./instrument";
 
-export { Trace, tracer };
+export { traceInitializer, tracer };

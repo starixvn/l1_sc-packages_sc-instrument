@@ -12,7 +12,7 @@ import { MongooseInstrumentation } from "@opentelemetry/instrumentation-mongoose
 import { IncomingMessage } from "http";
 import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-proto";
 
-const trace = new NodeSDK({
+export const traceInitializer = new NodeSDK({
     contextManager: new AsyncLocalStorageContextManager(),
     textMapPropagator: new CompositePropagator({
         propagators: [
@@ -35,10 +35,8 @@ const trace = new NodeSDK({
     ],
 });
 
-export default trace;
-
 export const initSpanProcessor = (collectorUri: string) => {
-    trace.configureTracerProvider(
+    traceInitializer.configureTracerProvider(
         null,
         new BatchSpanProcessor(
             new OTLPTraceExporter({
@@ -50,7 +48,7 @@ export const initSpanProcessor = (collectorUri: string) => {
 };
 
 export const addIdentifiers = (serviceName: string, env: string) => {
-    trace.addResource(
+    traceInitializer.addResource(
         new Resource({
             [SemanticResourceAttributes.SERVICE_NAME]: `${serviceName} - ${env}`,
             [SemanticResourceAttributes.DEPLOYMENT_ENVIRONMENT]: env,
