@@ -8,9 +8,9 @@ import { B3InjectEncoding, B3Propagator } from "@opentelemetry/propagator-b3";
 import { AsyncLocalStorageContextManager } from "@opentelemetry/context-async-hooks";
 import { HttpInstrumentation } from "@opentelemetry/instrumentation-http";
 import { SocketIoInstrumentation } from "opentelemetry-instrumentation-socket.io";
-import { MongooseInstrumentation } from "@opentelemetry/instrumentation-mongoose";
 import { IncomingMessage } from "http";
 import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-proto";
+import { MongoDBInstrumentation } from "@opentelemetry/instrumentation-mongodb";
 
 export const initializer = new NodeSDK({
     contextManager: new AsyncLocalStorageContextManager(),
@@ -31,7 +31,7 @@ export const initializer = new NodeSDK({
             },
         }),
         new SocketIoInstrumentation() as any,
-        new MongooseInstrumentation(),
+        new MongoDBInstrumentation(),
     ],
 });
 
