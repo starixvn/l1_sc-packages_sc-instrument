@@ -11,7 +11,6 @@ import { SocketIoInstrumentation } from "opentelemetry-instrumentation-socket.io
 import { IncomingMessage } from "http";
 import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-proto";
 import { MongooseInstrumentation } from "@opentelemetry/instrumentation-mongoose";
-import { MongoDBInstrumentation } from "@opentelemetry/instrumentation-mongodb";
 
 export const initializer = new NodeSDK({
     contextManager: new AsyncLocalStorageContextManager(),
@@ -33,7 +32,6 @@ export const initializer = new NodeSDK({
         }),
         new SocketIoInstrumentation() as any,
         new MongooseInstrumentation(),
-        new MongoDBInstrumentation(),
     ],
 });
 
