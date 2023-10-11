@@ -11,6 +11,7 @@ import { SocketIoInstrumentation } from "opentelemetry-instrumentation-socket.io
 import { IncomingMessage } from "http";
 import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-proto";
 import { MongooseInstrumentation } from "@opentelemetry/instrumentation-mongoose";
+import { FastifyInstrumentation } from "@opentelemetry/instrumentation-fastify";
 
 export const initializer = new NodeSDK({
     contextManager: new AsyncLocalStorageContextManager(),
@@ -30,6 +31,7 @@ export const initializer = new NodeSDK({
                 return req.method === "GET" || req.statusCode === 204;
             },
         }),
+        new FastifyInstrumentation(),
         new SocketIoInstrumentation() as any,
         new MongooseInstrumentation(),
     ],
