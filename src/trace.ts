@@ -28,7 +28,7 @@ export const initializer = new NodeSDK({
     instrumentations: [
         new HttpInstrumentation({
             ignoreIncomingRequestHook: (req: IncomingMessage) => {
-                return req.method === "GET" || req.statusCode === 204;
+                return req.method === "GET" && req.statusCode === 204;
             },
         }),
         new FastifyInstrumentation(),
