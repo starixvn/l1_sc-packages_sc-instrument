@@ -1,6 +1,6 @@
 import { addIdentifiers, initSpanProcessor, initializer } from "./trace";
 
-export const run = (enabled: boolean, endpoint: string, system: string, env: string, serviceName: string) => {
+export const startTrace = (enabled: boolean, endpoint: string, system: string, env: string, serviceName: string) => {
     if (!enabled) return;
 
     initSpanProcessor(endpoint, initializer);
