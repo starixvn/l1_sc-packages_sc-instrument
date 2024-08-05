@@ -1,6 +1,6 @@
 {
     "name": "sc-instrument",
-    "version": "1.1.1",
+    "version": "1.1.2-beta.0",
     "description": "SC Intrumentation",
     "main": "./lib/index.js",
     "typings": "./lib/index.d.ts",
