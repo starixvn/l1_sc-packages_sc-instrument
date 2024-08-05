@@ -10,6 +10,10 @@ import { MongooseInstrumentation } from "@opentelemetry/instrumentation-mongoose
 import { FastifyInstrumentation } from "@opentelemetry/instrumentation-fastify";
 import { registerInstrumentations } from "@opentelemetry/instrumentation";
 import { ExpressInstrumentation, ExpressLayerType } from "@opentelemetry/instrumentation-express";
+import { B3InjectEncoding, B3Propagator } from "@opentelemetry/propagator-b3";
+import { AsyncLocalStorageContextManager } from "@opentelemetry/context-async-hooks";
+import { CompositePropagator, W3CBaggagePropagator, W3CTraceContextPropagator } from "@opentelemetry/core";
+import { JaegerPropagator } from "@opentelemetry/propagator-jaeger";
 
 export const initializer = (serviceName: string, env: string) => {
     return new NodeTracerProvider({
@@ -35,7 +39,19 @@ export const initSpanProcessor = (tracerProvider: NodeTracerProvider, collectorU
             scheduledDelayMillis: 30000,
         })
     );
-    tracerProvider.register();
+    tracerProvider.register({
+        contextManager: new AsyncLocalStorageContextManager(),
+        propagator: new CompositePropagator({
+            propagators: [
+                new JaegerPropagator(),
+                new W3CTraceContextPropagator(),
+                new W3CBaggagePropagator(),
+                new B3Propagator({
+                    injectEncoding: B3InjectEncoding.MULTI_HEADER,
+                }),
+            ],
+        }),
+    });
 
     registerInstrumentations({
         tracerProvider,
